@@ -1,15 +1,15 @@
 import streamlit as st
 from groq import Groq
 import os
-from dotenv import load_dotenv
+
 from style import apply_theme
 
 apply_theme()
 
 
 # Load env
-load_dotenv()
-client = Groq(api_key=os.getenv("GSK_API_KEY"))
+
+client = Groq(api_key=st.secrets["GSK_API_KEY"])
 
 # Page config
 st.set_page_config(page_title="AI Insights", layout="wide")
