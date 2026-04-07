@@ -35,7 +35,7 @@ st.markdown("""
 col1, col2 = st.columns([2, 1])
 
 with col1:
-    st.title("🔍 Data Lens")
+    st.title("Data Lens")
     st.subheader("AI-Powered Data Dictionary & Analysis Tool")
     st.write("""
     **Data Lens** is an intelligent system designed to automatically analyze CSV datasets 
@@ -43,7 +43,7 @@ with col1:
     Stop spending hours on manual cleaning—let AI do the heavy lifting.
     """)
     
-    if st.button("🚀 Get Started / Upload CSV"):
+    if st.button("Get Started / Upload CSV"):
         st.info("Please select the **'Upload Data'** page from the sidebar to continue!")
 
 with col2:
@@ -53,31 +53,31 @@ with col2:
 st.divider()
 
 # 4. Features Section (Using Columns for a Grid Layout)
-st.markdown("### 🚀 Key Capabilities")
+st.markdown("### Key Capabilities")
 f_col1, f_col2, f_col3 = st.columns(3)
 
 with f_col1:
     st.markdown("""<div class="feature-card">
-    <h4>📂 Smart Upload</h4>
+    <h4> Smart Upload</h4>
     <p>Seamlessly upload CSVs and let the system detect structure, types, and delimiters automatically.</p>
     </div>""", unsafe_allow_html=True)
 
 with f_col2:
     st.markdown("""<div class="feature-card">
-    <h4>🤖 AI Descriptions</h4>
+    <h4>AI Descriptions</h4>
     <p>Generate human-readable descriptions for every column using advanced LLMs.</p>
     </div>""", unsafe_allow_html=True)
 
 with f_col3:
     st.markdown("""<div class="feature-card">
-    <h4>📊 Deep Insights</h4>
+    <h4>Deep Insights</h4>
     <p>Identify missing values, duplicates, and statistical patterns in seconds.</p>
     </div>""", unsafe_allow_html=True)
 
 st.write("") # Spacer
 
 # 5. Why Data Lens Section
-with st.expander("💡 Why choose Data Lens over manual analysis?", expanded=True):
+with st.expander("Why choose Data Lens over manual analysis?", expanded=True):
     st.write("""
     Manual data analysis is prone to human error and consumes nearly 80% of a data scientist's time. 
     **Data Lens** automates the repetitive "Data Cleaning" and "Dictionary Creation" phases, allowing 
@@ -85,7 +85,7 @@ with st.expander("💡 Why choose Data Lens over manual analysis?", expanded=Tru
     """)
 
 # 6. Success Banner
-st.success("✨ Transform raw data into insights instantly with AI 🚀")
+st.success("Transform raw data into insights instantly with AI ")
 
 # 7. Sidebar
 st.sidebar.title("Navigation")
