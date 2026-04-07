@@ -30,7 +30,7 @@ def create_pdf(report_text, df):
     content.append(Spacer(1, 0.2 * inch))
 
     # 2. Add Dataset Overview Section
-    content.append(Paragraph("<b>📊 Dataset Overview</b>", styles["Heading2"]))
+    content.append(Paragraph("<b>Dataset Overview</b>", styles["Heading2"]))
     content.append(Paragraph(f"Rows: {df.shape[0]}", styles["Normal"]))
     content.append(Paragraph(f"Columns: {df.shape[1]}", styles["Normal"]))
     
@@ -44,7 +44,7 @@ def create_pdf(report_text, df):
     content.append(Spacer(1, 0.3 * inch))
 
     # 3. Add AI Insights Section
-    content.append(Paragraph("<b>🧠 AI Generated Insights</b>", styles["Heading2"]))
+    content.append(Paragraph("<b> AI Generated Insights</b>", styles["Heading2"]))
     for line in report_text.split("\n"):
         if line.strip():
             # Bold keywords if they look like headers
@@ -58,10 +58,10 @@ def create_pdf(report_text, df):
     return buffer
 
 # --- Streamlit UI Logic ---
-st.title("📄 Data Report")
+st.title("Data Report")
 
 if 'insights' not in st.session_state or 'df' not in st.session_state:
-    st.warning("⚠️ Please generate insights and upload data first")
+    st.warning("Please generate insights and upload data first")
     st.stop()
 
 insights = st.session_state['insights']
@@ -76,7 +76,7 @@ text1 = clean_markdown(insights)
 pdf_file = create_pdf(text1, df)
 
 st.download_button(
-    label="📄 Download Full Report (PDF)",
+    label="Download Full Report (PDF)",
     data=pdf_file,
     file_name="data_report.pdf",
     mime="application/pdf"
