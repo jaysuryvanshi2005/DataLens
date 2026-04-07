@@ -7,16 +7,16 @@ apply_theme()
 
 st.set_page_config(page_title="Visualization", layout="wide")
 
-st.title("📊 Data Visualization")
+st.title("Data Visualization")
 
 # Check dataset
 if 'df' not in st.session_state:
-    st.warning("⚠️ Please upload a dataset first.")
+    st.warning("Please upload a dataset first.")
 else:
     df = st.session_state['df']
 
     # 🔧 Missing Value Handling
-    st.subheader("⚙️ Data Cleaning (for Visualization)")
+    st.subheader("Data Cleaning (for Visualization)")
 
     threshold = st.slider(
         "Select missing value threshold (%)",
@@ -33,17 +33,17 @@ else:
     # Create cleaned dataframe
     clean_df = df.loc[:, missing_percent < threshold]
 
-    st.success("✅ Data cleaned for visualization")
+    st.success("Data cleaned for visualization")
 
     # Safety check
     if clean_df.shape[1] == 0:
-        st.error("❌ No columns left after filtering! Reduce threshold.")
+        st.error("No columns left after filtering! Reduce threshold.")
     else:
 
 
         # 📊 Single Column Visualization
 
-        st.subheader("📊 Visualize Individual Column")
+        st.subheader("Visualize Individual Column")
 
         column = st.selectbox("Choose a column", clean_df.columns)
 
@@ -93,7 +93,7 @@ else:
 
         # 📊 Visualize All Columns
 
-        st.subheader("📊 Visualize All Columns")
+        st.subheader("Visualize All Columns")
 
         if st.button("Generate All Visualizations"):
 
