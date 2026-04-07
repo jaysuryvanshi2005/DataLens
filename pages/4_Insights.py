@@ -13,24 +13,24 @@ client = Groq(api_key=st.secrets["GSK_API_KEY"])
 
 # Page config
 st.set_page_config(page_title="AI Insights", layout="wide")
-st.title("🔍 AI INSIGHTS")
+st.title("AI INSIGHTS")
 
 
 # Check dataset
 if 'df' not in st.session_state:
-    st.warning("⚠️ Please upload a dataset first.")
+    st.warning("Please upload a dataset first.")
 else:
     df = st.session_state['df']
 
 
 
 # 🧠 Title Section
-st.markdown('<p class="main-title">🧠 AI Insights Dashboard</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-title">AI Insights Dashboard</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-text">Understand what your data is trying to tell you 🚀</p>', unsafe_allow_html=True)
 
 # Check dataset
 if 'df' not in st.session_state:
-    st.warning("⚠️ Please upload a dataset first.")
+    st.warning("Please upload a dataset first.")
     st.stop()
 
 df = st.session_state['df']
@@ -39,13 +39,13 @@ df = st.session_state['df']
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown(f'<div class="card">📊 <b>Rows:</b><br>{df.shape[0]}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="card"><b>Rows:</b><br>{df.shape[0]}</div>', unsafe_allow_html=True)
 
 with col2:
-    st.markdown(f'<div class="card">📈 <b>Columns:</b><br>{df.shape[1]}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="card"><b>Columns:</b><br>{df.shape[1]}</div>', unsafe_allow_html=True)
 
 with col3:
-    st.markdown(f'<div class="card">🧮 <b>Features:</b><br>{", ".join(df.columns[:5])}...</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="card"><b>Features:</b><br>{", ".join(df.columns[:5])}...</div>', unsafe_allow_html=True)
 
 st.write("")
 
@@ -116,7 +116,7 @@ with col_btn2:
 
             st.markdown(insights)
 
-            st.markdown("### 📌 Insights")
+            st.markdown("### Insights")
             st.markdown(f"""
             <div class="card">
             {insights}
