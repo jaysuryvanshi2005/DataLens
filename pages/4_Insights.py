@@ -26,7 +26,7 @@ else:
 
 # 🧠 Title Section
 st.markdown('<p class="main-title">AI Insights Dashboard</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-text">Understand what your data is trying to tell you 🚀</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-text">Understand what your data is trying to tell you </p>', unsafe_allow_html=True)
 
 # Check dataset
 if 'df' not in st.session_state:
